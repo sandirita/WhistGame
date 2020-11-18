@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+    	<title>Whist Game</title>
+    	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    	<script src= "mustache.js"> </script>
+    	<script src= "jquery-3.5.1.js"> </script>
+    	<script src= "index.js"> </script>
+    	<link rel="stylesheet" href="style.css">
+	</head>
+	
+	<body>
+    	<p th:if= "${name} != null" th:text="'Hello, ' + ${name} + '!'" />
+    	<p th:unless= "${name} != null" >Hello!</p>
+    
+    	<p class="secondPar"> Welcome to this Game </p>
+    	
+    	<form>
+    		<label for= "name" > name: </label>
+    		<input type= "text" th:attr= "value= ${name}" id= "name" />   				
+    	</form>
+    	<br/> 
+    	<form class= "submits" action= "/newGame" method ="POST" >
+         	<input type= "hidden"  name= "name" class= "name" th:attr= "value= ${name}" />
+         	<input type= "submit" value= "New Game" />
+    	</form>
+    	 
+   	 	<div id= "joinForms" > </div>
+    
+	</body>
+</html>

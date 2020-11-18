@@ -1,0 +1,9 @@
+{{#games}}
+
+<form class= "submits" action= "/joinGame" method ="POST" >
+	<p> {{host.name}}'s game.</p>
+	<input type= "hidden" name= "name" class= "name" />
+	<input type= "submit" value= "Join Game" />
+	<input type= "hidden" name= "id" value= {{id}} />
+</form>
+{{/games}}
