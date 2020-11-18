@@ -1,0 +1,13 @@
+@charset "UTF-8";
+body {
+  background-color: #F5F5F5;
+}
+h1 {
+  color: #327197;
+}
+p {
+  color: cadetblue;
+}
+.secondPar {
+	color: #352064;
+}

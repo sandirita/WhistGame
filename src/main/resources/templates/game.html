@@ -1,0 +1,18 @@
+<html xmlns:th="http://www.thymeleaf.org">
+	<head> 
+		<script src= "jquery-3.5.1.js" ></script>
+		<script src= "game.js"> </script> 
+	</head>
+	<body>
+		<p th:text= "${game.host} + '&#8217;' + 's game'"  />  
+		<p th:text= "${name} + ' actual player'" />
+		<h1>Players: </h1>
+		<ul id= "players" >
+			<li th:each= "player : ${game.players}" th:text= "${player}"> </li>
+		</ul>
+		<div id= "gameTable">  </div>
+		<button onclick="startGame()">Start Game</button>
+		<button onclick="endGame()">End</button>
+
+	</body>
+</html>
